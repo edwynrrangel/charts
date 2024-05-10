@@ -30,6 +30,7 @@ jobs:
       - name: Generate index file
         run: |
           helm repo index . --url https://edwynrrangel.github.io/charts/
+          rm -f get_helm.sh
 
       - name: Get author info
         run: |
@@ -51,7 +52,7 @@ jobs:
         
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        
+
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
