@@ -1,0 +1,46 @@
+name: Create index
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Helm
+        run: |
+          curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+          chmod 700 get_helm.sh
+          ./get_helm.sh
+      
+      - name: Generate index file
+        run: |
+          helm repo index . --url https://edwynrrangel.github.io/charts/
+
+      - name: Get author info
+        run: |
+          echo "author_name=$(git log -1 --pretty=format:'%an')" >> $GITHUB_ENV
+          echo "author_email=$(git log -1 --pretty=format:'%ae')" >> $GITHUB_ENV
+  
+      - name: Print author info
+        run: |
+          echo "The author name is $author_name"
+          echo "The author email is $author_email"
+      
+      - name: Commit and push changes
+        run: |
+          git config --local --replace-all user.email "$author_email"
+          git config --local --replace-all user.name "$author_name"
+          git add .
+          git commit -m "Update chart repository by $author_email" -a || echo "No changes to commit"
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/edwynrrangel/charts HEAD:master
+        
