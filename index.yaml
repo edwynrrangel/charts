@@ -2,9 +2,9 @@ apiVersion: v1
 entries:
   banking-service:
   - apiVersion: v2
-    created: "2024-05-10T03:53:46.438986179Z"
+    created: "2024-05-10T03:56:22.206557863Z"
     description: A Helm chart for Kubernetes
-    digest: dc669764bf2d559494013f0aec56b2e39caa0256e5ff7a44baab0768c54fc865
+    digest: 22363db707e02458c1d28aa52fc6014c01d4b544a400fabca260e86ce5d2be5b
     name: banking-service
     type: application
     urls:
@@ -12,11 +12,11 @@ entries:
     version: 0.0.1
   grpc-service:
   - apiVersion: v2
-    created: "2024-05-10T03:53:46.439303272Z"
+    created: "2024-05-10T03:56:22.207558968Z"
     description: A Helm chart for gRPC service
-    digest: a777b7ce8e7a1ac057222ff306a8be96c835c25f2897a9301ef4ae4b033b6e80
+    digest: 8d56aa9f88516e14fd1a93f15bb549f5d86762fbd4f9eb426454449ab902593e
     name: grpc-service
     urls:
     - https://edwynrrangel.github.io/charts/grpc-service-0.0.1.tgz
     version: 0.0.1
-generated: "2024-05-10T03:53:46.438396306Z"
+generated: "2024-05-10T03:56:22.205979975Z"
