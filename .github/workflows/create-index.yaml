@@ -40,7 +40,7 @@ jobs:
         run: |
           git config --local --replace-all user.email "$author_email"
           git config --local --replace-all user.name "$author_name"
-          git add .
+          git add index.yaml
           git commit -m "Update chart repository by $author_email" -a || echo "No changes to commit"
           git push https://${{ secrets.GITHUB_TOKEN }}@github.com/edwynrrangel/charts HEAD:master
         
