@@ -2,16 +2,32 @@ apiVersion: v1
 entries:
   banking-service:
   - apiVersion: v2
-    created: "2024-05-17T02:15:52.575871835Z"
-    description: A Helm chart for Kubernetes
-    digest: 6d4d231dd46f1647c302dd9762c1d78aa831494b8b1ba27c09d471281a3cc2a7
+    created: "2024-05-17T19:02:51.253078837Z"
+    description: 'A Helm chart for deploying essential services like MongoDB, RabbitMQ,
+      and Redis on Kubernetes. This chart supports StatefulSets for persistent state
+      management, Horizontal Pod Autoscaling (HPA)  for dynamic scaling based on resource
+      usage, and seamless integration with Kubernetes services  for efficient communication
+      and load balancing. It includes predefined ConfigMaps, Services,  and Service
+      Accounts for streamlined deployment and management. '
+    digest: 019b1dc497dd449ca1a3f305ed1f9498ff728ab378510c670cbf45d9555c4152
+    keywords:
+    - kubernetes
+    - helm
+    - statefulset
+    - hpa
+    - configmap
+    - service
+    - serviceaccount
+    maintainers:
+    - email: edwynrangel@gmail.com
+      name: Edwyn Rangel
     name: banking-service
     type: application
     urls:
     - https://edwynrrangel.github.io/charts/banking-service-0.1.0.tgz
     version: 0.1.0
   - apiVersion: v2
-    created: "2024-05-17T02:15:52.575414269Z"
+    created: "2024-05-17T19:02:51.252600871Z"
     description: A Helm chart for Kubernetes
     digest: 05a7fcfb8fffec6de6adb6999a3a0666ec1f9fe81b75877cfe18a3f3684c55df
     name: banking-service
@@ -21,16 +37,16 @@ entries:
     version: 0.0.1
   grpc-server:
   - apiVersion: v2
-    created: "2024-05-17T02:15:52.57621675Z"
+    created: "2024-05-17T19:02:51.253432189Z"
     description: A Helm chart for gRPC server
-    digest: 77a0d8b93180f0467d3f45dcfdf73b15402b4e95def7c9bc8d1f7be641a79521
+    digest: 75816c46888a32c2ae26cecabc4f7e7741fa766b5cd2d95a9ad34ac9f7a26ac7
     name: grpc-server
     urls:
     - https://edwynrrangel.github.io/charts/grpc-server-0.1.0.tgz
     version: 0.1.0
   grpc-service:
   - apiVersion: v2
-    created: "2024-05-17T02:15:52.576808097Z"
+    created: "2024-05-17T19:02:51.254011084Z"
     description: A Helm chart for gRPC service
     digest: 872f65e920176e2becb72c5af19d141036c660db4292965ea49dd9c78b480a2b
     name: grpc-service
@@ -38,11 +54,35 @@ entries:
     - https://edwynrrangel.github.io/charts/grpc-service-0.0.2.tgz
     version: 0.0.2
   - apiVersion: v2
-    created: "2024-05-17T02:15:52.576514037Z"
+    created: "2024-05-17T19:02:51.253726631Z"
     description: A Helm chart for gRPC service
     digest: eab25ba13dfc059afe77cacc6ce5c59eb872f92b731694d3e05065df18273c78
     name: grpc-service
     urls:
     - https://edwynrrangel.github.io/charts/grpc-service-0.0.1.tgz
     version: 0.0.1
-generated: "2024-05-17T02:15:52.574729748Z"
+  pvc:
+  - apiVersion: v2
+    created: "2024-05-17T19:02:51.254514938Z"
+    description: 'A Helm chart for creating and managing PersistentVolumeClaims (PVCs)
+      in Kubernetes.  This chart provides a configurable way to define PVCs, enabling
+      storage provisioning  for your applications with customizable access modes,
+      storage sizes, and storage classes. '
+    digest: 71f2e73ec72220596ecc4fff54a94dbddad2a6f0bfec9442ccdf85096e3cd63b
+    keywords:
+    - pvc
+    - persistentvolumeclaim
+    - storage
+    - kubernetes
+    - helm
+    maintainers:
+    - email: edwynrangel@gmail.com
+      name: Edwyn Rangel
+    name: pvc
+    sources:
+    - https://github.com/edwynrangel/grpc
+    type: application
+    urls:
+    - https://edwynrrangel.github.io/charts/pvc-0.0.1.tgz
+    version: 0.0.1
+generated: "2024-05-17T19:02:51.251945793Z"
